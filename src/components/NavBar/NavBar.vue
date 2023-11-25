@@ -17,10 +17,7 @@ defineProps({
 </script>
 
 <style scoped>
-span {
-  /* margin-left: 30px;
-  margin-right: 40px; */
-}
+
 
 .navtexts {
   display: flex;
