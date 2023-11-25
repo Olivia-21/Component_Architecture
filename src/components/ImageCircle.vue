@@ -19,7 +19,7 @@ div {
 }
 
 img {
-  width: 10px;
+  width: 30px;
   height: 10px;
 }
 </style>
