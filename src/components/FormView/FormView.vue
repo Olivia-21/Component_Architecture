@@ -36,7 +36,7 @@ const textOnForm = ref("Create Account");
 <style scoped>
 form {
   width: 50%;
-  margin: 20px auto;
+  margin: 50px auto;
 }
 .button {
   margin-top: 15px;

@@ -14,12 +14,14 @@ import imageUrl from "../assets/Vector.png";
 div {
   background-color: rgba(179, 179, 179, 1);
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
 }
 
 img {
-  width: 30px;
-  height: 10px;
+  width: 40px;
+  height: 40px;
+  margin: 20px 30px;
+  text-align: center;
 }
 </style>
