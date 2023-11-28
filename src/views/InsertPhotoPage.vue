@@ -1,57 +1,58 @@
 <template>
-  <div>
-    <LayOut :Image="ImageUrl" :navItems="['Back', 'Step 2 of 4', 'Exit']">
-      <div class="imgTexts">
-        <div class="texts">
-        <h3>Add Photo</h3>
-        <p>Add a photo so other members know who you are</p>
-    </div>
-        <span><img :src="imageUrl" alt="" /></span>
+  <LayOut :Image="ImageUrl" :navItems="['Back', 'Step 2 of 4', 'Exit']">
+    <div class="content">
+      <h3>Add Photo</h3>
+      <p>Add a photo so other members know who you are</p>
+      <div><img :src="imageLink" alt="" /></div>
+      <slot></slot>
+      <div class="uploadphoto">
+        <SignupButton buttonText="Continue" @click="navigateToPhotoPage" />
       </div>
-      <div class="signup"><SignupButton buttonText="Continue" @click="navigateToInterestPage"/></div>
-    </LayOut>
-  </div>
+    </div>
+    <div></div>
+  </LayOut>
 </template>
 
 <script setup>
-import imageUrl from "../assets/Ellipse 32.png";
 import LayOut from "@/LayOut/LayOut.vue";
 import ImageUrl from "../assets/page2-image.png";
 import SignupButton from "@/components/Buttons/SignupButton.vue";
+import imageLink from "../assets/addphotoImage.png";
 import { useRouter } from "vue-router";
-
 const navigate = useRouter();
-
-const navigateToInterestPage = () =>{
+const navigateToPhotoPage = () => {
   navigate.push("/interestpage");
-}
-
+};
 </script>
 
 <style scoped>
-.imgTexts {
+.content {
+  margin: 10px auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
 }
 
-.texts{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-    gap: 10px;
+h3 {
+  margin-bottom: 5px;
 }
 
-img{
-    margin-top: 40px;
-
+p {
+  margin-bottom: 50px;
 }
 
-.signup {
-  margin: 200px auto;
+.uploadphoto {
+  margin-top: 100px;
   width: 38%;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  margin: 20px 30px;
+  text-align: center;
 }
 </style>

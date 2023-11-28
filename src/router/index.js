@@ -3,6 +3,8 @@ import HomeView from "../views/HomeView.vue";
 import AddPhotopage from "../views/AddPhotopage.vue";
 import InsertImagePage from "../views/InsertPhotoPage.vue";
 import InterestPage from "../views/InterestPage.vue";
+import InterestPage2 from "../views/InterestPage2.vue";
+import CongratsPage from "../views/CongratsPage.vue";
 
 const routes = [
   {
@@ -24,6 +26,16 @@ const routes = [
     path: "/interestpage",
     name: "Interest Page",
     component: InterestPage,
+  },
+  {
+    path: "/interestpage2",
+    name: "Interest-Page2",
+    component: InterestPage2,
+  },
+  {
+    path: "/congrats",
+    name: "congratsPage",
+    component: CongratsPage,
   },
 ];
 
