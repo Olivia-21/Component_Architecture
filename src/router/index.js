@@ -5,7 +5,7 @@ import InsertImagePage from "../views/InsertPhotoPage.vue";
 import InterestPage from "../views/InterestPage.vue";
 import InterestPage2 from "../views/InterestPage2.vue";
 import CongratsPage from "../views/CongratsPage.vue";
-
+import ClientDetails from "../views/ClientDetailsPage.vue";
 const routes = [
   {
     path: "/",
@@ -36,6 +36,12 @@ const routes = [
     path: "/congrats",
     name: "congratsPage",
     component: CongratsPage,
+  },
+  {
+    path: "/clientdetails/:name",
+    name: "clientdetails",
+
+    component: ClientDetails,
   },
 ];
 
