@@ -14,7 +14,7 @@ import { useRoute } from "vue-router";
 const route = useRoute();
 console.log(route.params.name);
 onMounted(() => {
-  getDetails(`https://jsonplaceholder.typicode.com/${name}`);
+  getDetails(`https://jsonplaceholder.typicode.com/`);
   console.log(route.params.name);
 });
 </script>

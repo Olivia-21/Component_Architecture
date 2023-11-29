@@ -40,6 +40,7 @@ const routes = [
   {
     path: "/clientdetails/:name",
     name: "clientdetails",
+
     component: ClientDetails,
   },
 ];

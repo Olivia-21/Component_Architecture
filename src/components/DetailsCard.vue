@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="circle"></div>
-    <router-link :to="`/details${clientdetails.name}`">
+    <router-link :to="`/details${clientdetails.id}`">
       <div class="content">
         <h3>{{ clientdetails.name }}</h3>
         <span><strong>Email:</strong>{{ clientdetails.email }}</span>
