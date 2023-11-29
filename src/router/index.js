@@ -38,9 +38,8 @@ const routes = [
     component: CongratsPage,
   },
   {
-    path: "/clientdetails/:name",
+    path: "/clientdetails/:id",
     name: "clientdetails",
-
     component: ClientDetails,
   },
 ];

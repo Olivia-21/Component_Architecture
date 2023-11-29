@@ -2,9 +2,6 @@
   <LayOut :Image="photoUrl">
     <div class="container">
       <div class="clientList" v-for="client in clientDetails" :key="client">
-        <!-- <h3>
-          {{ clientName.name }}
-        </h3> -->
         <DetailsPage :clientdetails="client" />
       </div>
       <div class="signup">
@@ -23,16 +20,11 @@ import DetailsPage from "../components/DetailsCard.vue";
 // import ClientDetails from "../views/ClientDetails.vue";
 import { onMounted } from "vue";
 import { getDetails, clientDetails } from "../Composable/ApiCall";
-import { useRoute } from "vue-router";
 
 //onMounting the API fetched(receives a callback function)
 onMounted(() => {
   getDetails("https://jsonplaceholder.typicode.com/users");
 });
-
-const route = useRoute();
-console.log(getDetails(route.params));
-// const imageUrls = ref([{ name: "Leann", url: "../" }]);
 </script>
 
 <style scoped>
