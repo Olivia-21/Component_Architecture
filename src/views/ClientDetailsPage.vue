@@ -143,7 +143,7 @@ h1 {
   text-align: center;
   margin-top: 30px;
   font-weight: 600px;
-  font-size: 30px;
+  font-size: 31px;
   line-height: 39.16px;
 }
 
