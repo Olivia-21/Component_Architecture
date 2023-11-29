@@ -1,6 +1,12 @@
 <template>
   <div class="clientdetails">
-    <h1>User Biography</h1>
+    <div class="profile">
+      <div class="image"></div>
+      <p>
+        I am {{ user?.name }} and I am Happy to meet You.<br />
+        I am happy to know you that 300 + projects done successfully!
+      </p>
+    </div>
     <div class="userInfo">
       <div class="name">
         <h1>Bio</h1>
@@ -33,6 +39,16 @@
           {{ user.company?.catchPhrase }}
         </p>
       </div>
+      <div class="company">
+        <h1>Company</h1>
+        <h3>
+          <span><strong>Name:</strong></span> {{ user.company?.name }}
+        </h3>
+        <p>
+          <span><strong>CatchPhase:</strong></span>
+          {{ user.company?.catchPhrase }}
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -49,46 +65,88 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.userInfo {
-  /* background-color: blue; */
-  margin: 50px;
+.clientdetails {
   display: flex;
+  width: 100%;
+}
+
+.userInfo {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 80px;
-  margin: 150px auto;
+  align-items: center;
+  gap: 30px;
 }
 
 .name,
 .address,
 .company {
-  background-color: white;
-  padding: 10px 30px;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
+  height: 35%;
+  width: 35%;
+  text-align: left;
+  padding: 10px;
 }
 
 .name {
   border-bottom: 8px solid aqua;
+  height: 330px;
 }
 h1 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-align: center;
   text-decoration: underline;
 }
 
 p {
-  margin: 15px;
+  margin: 10px;
 }
 .address {
   border-bottom: 8px solid wheat;
+  height: 330px;
 }
 
 .company {
   border-bottom: 8px solid blue;
+  height: 330px;
 }
 
-.clientdetails h1 {
+.clientdetails h5,
+h1 {
+  text-align: center;
+  margin: 30px;
+}
+.clientdetails #toptext {
+  color: blue;
+}
+
+.profile {
+  background-color: blue;
+  width: 50%;
+  height: 100vh;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile p {
+  color: white;
+  text-align: center;
   margin-top: 30px;
-  text-decoration: none;
+  font-weight: 600px;
+  font-size: 30px;
+  line-height: 39.16px;
+}
+
+.image {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  margin: 10% auto 0 auto;
+  background-image: url("../assets/profilePics/profile\ \(11\).jpg");
+  background-size: cover;
+  background-position: center;
 }
 </style>
