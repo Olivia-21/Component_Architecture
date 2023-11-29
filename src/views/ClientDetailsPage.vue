@@ -1,7 +1,10 @@
 <template>
   <div class="clientdetails">
     <div class="profile">
-      <div class="image"></div>
+      <div class="image">
+        <!-- <img :src="Images" alt="" /> -->
+        <img src="https://random.imagecdn.app/500/150" />
+      </div>
       <p>
         I am {{ user?.name }} and I am Happy to meet You.<br />
         I am happy to know you that 300 + projects done successfully!
@@ -128,6 +131,10 @@ h1 {
   background-color: blue;
   width: 50%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -140,12 +147,11 @@ h1 {
   line-height: 39.16px;
 }
 
-.image {
+img {
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  margin: 10% auto 0 auto;
-  background-image: url("../assets/profilePics/profile\ \(11\).jpg");
+  /* background-image: url("../assets/profilePics/profile\ \(11\).jpg"); */
   background-size: cover;
   background-position: center;
 }

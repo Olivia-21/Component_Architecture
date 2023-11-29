@@ -5,7 +5,7 @@
         <DetailsPage :clientdetails="client" />
       </div>
       <div class="signup">
-        <SignupButton buttonText="Continue" />
+        <SignupButton buttonText="Continue" @click="navigatePage" />
       </div>
     </div>
   </LayOut>
@@ -16,10 +16,14 @@ import LayOut from "@/LayOut/LayOut.vue";
 import photoUrl from "../assets/congratsImage.png";
 import SignupButton from "@/components/Buttons/SignupButton.vue";
 import DetailsPage from "../components/DetailsCard.vue";
-// import Image from "../assets/profilePics/profile (1).jpg";
-// import ClientDetails from "../views/ClientDetails.vue";
+import { useRouter } from "vue-router";
 import { onMounted } from "vue";
 import { getDetails, clientDetails } from "../Composable/ApiCall";
+
+const navigate = useRouter();
+const navigatePage = () => {
+  navigate.push("/");
+};
 
 //onMounting the API fetched(receives a callback function)
 onMounted(() => {
