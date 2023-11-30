@@ -9,7 +9,6 @@ const getDetails = async (url) => {
     const details = await axios.get(url);
     clientDetails.value = details?.data;
     user.value = details?.data;
-    console.log(clientDetails.value);
   } catch (error) {
     console.log(error);
   }
